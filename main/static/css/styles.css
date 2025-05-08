@@ -365,7 +365,7 @@ main p {
 .project-card {
     background-color: transparent;
     perspective: 1000px;
-    height: 650px;
+    height: 850px;
 }
 
 .project-card-inner {
