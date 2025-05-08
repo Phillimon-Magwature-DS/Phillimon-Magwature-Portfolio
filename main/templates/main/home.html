@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="bouncing-letters">
+    <span>D</span>
+    <span>A</span>
+    <span>T</span>
+    <span>A</span>
+    <span></span>
+    <span>S</span>
+    <span>C</span>
+    <span>I</span>
+    <span>E</span>
+    <span>N</span>
+    <span>T</span>
+    <span>I</span>
+    <span>S</span>
+    <span>T</span>
+</div>
+<p>
+    <strong>Phillimon Magwature</strong>, a passionate and results-driven Data Scientist with expertise in machine learning, data analysis, and data visualization. I specialize in turning complex data into actionable insights that drive business decisions. With a strong foundation in Python, SQL, and statistical modeling, I have successfully delivered projects in predictive analytics, natural language processing, and computer vision. My goal is to leverage data to solve real-world problems and create innovative solutions.
+</p>
+<p>
+    In addition to my data science skills, I have extensive experience in <strong>Front-End Development</strong>, including proficiency in <strong>JavaScript</strong>, <strong>CSS</strong>, and <strong>HTML</strong>. I am also skilled in <strong>Django</strong> for web development, <strong>Kivy</strong> for building cross-platform applications, and <strong>Streamlit</strong> for creating interactive data apps. My diverse skill set allows me to approach problems from multiple angles and deliver comprehensive solutions.
+</p>
+<div class="navigation-boxes">
+    <div class="box">
+        <a href="{% url 'about' %}">
+            <i class="fas fa-user"></i>
+            <h3>About Me</h3>
+        </a>
+    </div>
+    <div class="box">
+        <a href="{% url 'projects' %}">
+            <i class="fas fa-project-diagram"></i>
+            <h3>Projects</h3>
+        </a>
+    </div>
+    <div class="box">
+        <a href="{% url 'contact' %}">
+            <i class="fas fa-envelope"></i>
+            <h3>Contact</h3>
+        </a>
+    </div>
+</div>
+{% endblock %}

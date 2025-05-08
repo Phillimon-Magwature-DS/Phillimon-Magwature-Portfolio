@@ -1,0 +1,72 @@
+{% extends 'main/base.html' %}
+
+{% block body_class %}contact-page{% endblock %}
+
+{% block content %}
+<div class="contact-container">
+    <!-- Display Messages -->
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <!-- Contact Details -->
+    <div class="contact-details">
+        <h2>Get in Touch</h2>
+        <p>Let's collaborate on your next data science project! Feel free to reach out for opportunities or inquiries.</p>
+        
+        <ul class="contact-info">
+            <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:magwaturephillimon07@gmail.com" class="email-link">magwaturephillimon07@gmail.com</a>
+            </li>
+            <li>
+                <i class="fas fa-phone"></i>
+                <span>+263 78 612 6690 / +263 71 522 9756</span>
+            </li>
+            <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Harare, Zimbabwe</span>
+            </li>
+        </ul>
+        
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/phillimon-magwature-data-scientist" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Phillimon-Magwature-DS" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://x.com/MrPee_DS?t=wK1Or5-zWYPKXvt0YJZniw&s=09" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+        
+        <!-- Google Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.991318749999!2d30.93930076485256!3d-17.892688411089008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDUzJzMzLjciUyAzMMKwNTYnMjEuNSJF!5e0!3m2!1sen!2szw!4v1711040000000!5m2!1sen!2szw" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Commented out contact form (kept for future use) -->
+    <!--
+    <form method="POST" class="contact-form">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" class="form-control" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-block">Send Message</button>
+    </form>
+    -->
+</div>
+{% endblock %}
